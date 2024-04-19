@@ -1,24 +1,67 @@
 // Part 1 :Refactoring code
 
- let csvStr = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26"
+let csvStr = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26"
 // let csvStr =" Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232"
 
-let rows = csvStr.split('\n'); 
+//separate string using split method using \n delimeter
+let rows = csvStr.split('\n');
 console.log(rows);
+
+//create new empty array 
+
 let newData = [];
 for (let i = 0; i < rows.length; i++) {
   let row = rows[i];
+  newData.push(rows[i])
   let words = row.split(',');
-  for (j=0; j< words.length ;j++){
-   console.log(words.join('  '))
-  }
-  newData.push(rows)
- }
- 
 
-  console.log(newData);
+  for (j = 0; j < words.length; j++) {
+    //  console.log(words[j])
+    console.log(words.join(` `))
+
+  }
+
+}
+console.log(newData);
+
+console.log("----------------------------------------------------------------")
 
 // Part 2: Expanding Functionality
+//let arr = [];
+let csvStr1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26" 
+//  let csvStr1 =" Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232"
+
+// split the csv string into rows.
+
+const rows1 = csvStr1.split('\n');
+//create a 2d array to store the data.
+const array1 =[];
+
+// iterate over the rows and split each into columns
+for (let r=0; r<rows1.length; r++){
+const columns1 = rows1[r].split(',');
+
+// add the columns to 2d array
+array1.push(columns1);
+
+}
+//arr.push(array1);
+console.log(array1);
+console.log("----------------------------------------------------------------")
+
+//Part 3: Transforming Data
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
