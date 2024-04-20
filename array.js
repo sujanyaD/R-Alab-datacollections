@@ -96,18 +96,18 @@ console.log("----------------------------------------------------------------")
 
 //Part 5: Full Circle
 
-
+const keys=Object.keys(objectArray[0]);
 let csvString3 = "";
-for (let s = 0; s < objectArray.length; s++) {
-  const row = objectArray[s];
-  console.log(row)
-  for (let l = 0; l < row.length; l++) {
-    csvString3 += row[l] + ",";
-    // console.log(csvString3)
-  }
-  csvString3 += "\n";
-}
-// console.log(csvString3)
+objectArray.forEach(item =>{
+const row=keys.map(keys =>item[keys]).join(',');
+csvString3 += row + "\\n";
+});
+
+console.log(csvString3)
+
+
+
+
 
 
 
