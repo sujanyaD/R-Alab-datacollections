@@ -73,14 +73,41 @@ console.log("----------------------------------------------------------------")
 //Part 4: Sorting and Manipulating Data
 
 
-let poppedArray=objectArray.pop();
+let poppedArray = objectArray.pop();
 console.log(poppedArray)
-let obj={ id: "48", name: "Barry", occupation: "Runner", age: "25" }
-objectArray.splice(1,0,obj)
-
-let ob2={ id: "7", name: "Bilbo", occupation: "None", age: "111" }
+//
+let obj = { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+objectArray.splice(1, 0, obj)
+//
+let ob2 = { id: "7", name: "Bilbo", occupation: "None", age: "111" }
 objectArray.push(ob2)
+// caluculating average age of group
+let avgAge = 0;
+let sumAge = 0;
+for (let a = 0; a < objectArray.length; a++) {
+  let result = 0;
+  sumAge = sumAge + parseInt(objectArray[a].age);
+}
+avgAge = sumAge / objectArray.length
+console.log(`Average age of group :${avgAge}`);
+//console.log(sumAge)
+console.log("----------------------------------------------------------------")
+console.log("----------------------------------------------------------------")
 
+//Part 5: Full Circle
+
+
+let csvString3 = "";
+for (let s = 0; s < objectArray.length; s++) {
+  const row = objectArray[s];
+  console.log(row)
+  for (let l = 0; l < row.length; l++) {
+    csvString3 += row[l] + ",";
+    // console.log(csvString3)
+  }
+  csvString3 += "\n";
+}
+// console.log(csvString3)
 
 
 
