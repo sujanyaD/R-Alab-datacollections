@@ -26,6 +26,7 @@ for (let i = 0; i < rows.length; i++) {
 console.log(newData);
 
 console.log("----------------------------------------------------------------")
+console.log("----------------------------------------------------------------")
 
 // Part 2: Expanding Functionality
 
@@ -49,6 +50,7 @@ for (let r = 0; r < rows1.length; r++) {
 
 console.log(array1);
 console.log("----------------------------------------------------------------")
+console.log("----------------------------------------------------------------")
 
 // //Part 3: Transforming Data
 
@@ -62,12 +64,22 @@ for (let k = 1; k < array1.length; k++) {
     objectArray[k - 1][colheader[h].toLowerCase()] = array1[k][h];
     //console.log(array1[k][h]);
   }
-
 }
 console.log(objectArray);
 
+console.log("----------------------------------------------------------------")
+console.log("----------------------------------------------------------------")
+
+//Part 4: Sorting and Manipulating Data
 
 
+let poppedArray=objectArray.pop();
+console.log(poppedArray)
+let obj={ id: "48", name: "Barry", occupation: "Runner", age: "25" }
+objectArray.splice(1,0,obj)
+
+let ob2={ id: "7", name: "Bilbo", occupation: "None", age: "111" }
+objectArray.push(ob2)
 
 
 
